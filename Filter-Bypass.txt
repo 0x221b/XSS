@@ -1,5 +1,8 @@
 *Filter Bypass
 
+  *No aplhanumeric chars allowed
+   http://www.jsfuck.com
+
   *On error message:
     - Determine what part of input is affecting the error, remove different parts to test
     - find a way around specific issue
